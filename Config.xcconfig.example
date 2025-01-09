@@ -1,0 +1,31 @@
+# API Keys
+OPENAI_API_KEY = your-openai-api-key
+REPLICATE_API_KEY = your-replicate-api-key
+COMFYUI_API_KEY = your-comfyui-api-key
+
+# AWS Configuration
+AWS_REGION = us-west-2
+AWS_ACCESS_KEY = your-aws-access-key
+AWS_SECRET_KEY = your-aws-secret-key
+AWS_SESSION_TOKEN = your-session-token
+
+# AWS Services
+AWS_S3_BUCKET = your-s3-bucket
+AWS_CLOUDFRONT_DOMAIN = your-cloudfront-domain
+AWS_LAMBDA_FUNCTION = your-lambda-function
+AWS_API_GATEWAY_ID = your-api-gateway-id
+
+# Model Versions
+FOOOCUS_MODEL_VERSION = a747ba68d7fccb91fa1bbb6f11e5eb58017d81f5fa5bfd5e6d8e45d03a914c1c
+COMFYUI_MODEL_VERSION = latest
+
+# Performance Settings
+MAX_CONCURRENT_REQUESTS = 3
+REQUEST_TIMEOUT = 30
+MAX_RETRIES = 3
+CACHE_DURATION = 3600
+
+# Development
+DEBUG_MODE = true
+ENVIRONMENT = development
+LOG_LEVEL = debug 

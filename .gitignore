@@ -1,0 +1,65 @@
+# Swift
+.DS_Store
+.build/
+build/
+DerivedData/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Xcode
+*.xcodeproj
+*.xcworkspace
+
+# Swift Package Manager
+.build/
+Packages/
+Package.pins
+Package.resolved
+
+# Config files with sensitive data
+Config.xcconfig
+**/Config.xcconfig
+xcconfig/
+*.xcconfig
+
+# API Keys and Credentials
+*.pem
+*.key
+*.p12
+*.cer
+.env
+.env.*
+*.env
+credentials.json
+**/credentials.json
+
+# AWS
+aws-credentials.json
+aws-config.json
+.aws/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/ 
