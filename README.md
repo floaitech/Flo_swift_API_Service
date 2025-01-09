@@ -1,129 +1,59 @@
 # Flo AI API Services
 
-A collection of high-performance Swift API services for AI image generation and natural language processing.
+Swift implementation of AI services for image generation and text processing.
 
 ## Services
 
-### 1. ChatGPT API
-High-throughput OpenAI GPT integration with streaming support and context management.
+### ChatGPT API
 - Streaming responses
 - Context management
 - Rate limiting
 - Error handling
 
-### 2. Replicate API
-Production-ready Replicate.com API integration for various AI models.
+### Replicate API
 - Model version management
 - Prediction pipeline
 - Progress tracking
 - Result caching
 
-### 3. ComfyUI AWS API
-Enterprise-grade ComfyUI integration with AWS infrastructure.
+### ComfyUI AWS API
 - AWS Lambda integration
 - S3 storage
 - CloudFront CDN
 - DynamoDB state management
 
-### 4. Fooocus API
-Specialized API service for the Fooocus image generation model.
+### Fooocus API
 - Custom workflows
 - Advanced parameters
 - Result optimization
-- Quality presets
 
-## Architecture
+## Setup
 
-- **Thread Safety**: All services are thread-safe and designed for concurrent access
-- **Memory Management**: Efficient resource handling with automatic cleanup
-- **Error Handling**: Comprehensive error types and recovery strategies
-- **Monitoring**: Built-in performance metrics and logging
-
-## Getting Started
-
-1. Clone the repository:
+1. Clone and configure:
 ```bash
-git clone https://github.com/yourusername/flo-api-services.git
-cd flo-api-services
-```
-
-2. Copy and configure environment:
-```bash
+git clone https://github.com/floaitech/Flo_swift_API_Service.git
+cd Flo_swift_API_Service
 cp Config.xcconfig.example Config.xcconfig
-# Edit Config.xcconfig with your API keys and credentials
+# Add your API keys to Config.xcconfig
 ```
 
-3. Install dependencies:
-```bash
-# If using SPM
-swift package resolve
-```
+## Required Keys
 
-## Configuration
+| Service | Key | Purpose |
+|---------|-----|---------|
+| OpenAI | `OPENAI_API_KEY` | ChatGPT access |
+| Replicate | `REPLICATE_API_KEY` | Model access |
+| AWS | `AWS_ACCESS_KEY` | AWS services |
+| AWS | `AWS_SECRET_KEY` | AWS auth |
 
-Each service requires specific API keys and configuration:
+## Usage
 
-- **ChatGPT**: OpenAI API key
-- **Replicate**: Replicate API token
-- **ComfyUI**: AWS credentials and region
-- **Fooocus**: Model-specific configuration
-
-See `Config.xcconfig.example` for all required variables.
-
-## Usage Examples
-
-### ChatGPT Service
-```swift
-let service = ChatGPTService()
-service.sendMessage("Hello, world!") { result in
-    switch result {
-    case .success(let response):
-        print(response.content)
-    case .failure(let error):
-        print(error)
-    }
-}
-```
-
-### Replicate Service
-```swift
-let service = ReplicateService()
-service.generateImage(prompt: "sunset beach") { result in
-    switch result {
-    case .success(let image):
-        // Handle image
-    case .failure(let error):
-        // Handle error
-    }
-}
-```
-
-## Security
-
-- All API keys stored securely
-- AWS IAM best practices
-- Request signing
-- Input validation
-
-## Performance
-
-- Concurrent request handling
-- Response streaming
-- Result caching
-- Resource pooling
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
+See individual service README files:
+- [ChatGPT API](ChatGPT%20API/README.md)
+- [Replicate API](Replicate%20API/README.md)
+- [ComfyUI AWS](ComfyUI%20AWS%20Fooocus%20API%20(Current)/README.md)
+- [Fooocus API](Replicate%20Fooocus%20API/README.md)
 
 ## License
 
-MIT License - see LICENSE file
-
-## Support
-
-For support, please open an issue in the GitHub repository. 
+MIT License - see [LICENSE](LICENSE) 
